@@ -139,7 +139,7 @@ rules:
     verbs: ["get", "list", "update", "patch"]
   - apiGroups: ["instancetype.kubevirt.io"]
     resources: ["*"]
-    verbs: ["*"] 
+    verbs: ["*"]
   - apiGroups: ["cdi.kubevirt.io"]
     resources: ["*"]
     verbs: ["*"]
