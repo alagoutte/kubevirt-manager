@@ -76,7 +76,7 @@ spec:
     singular: image
     kind: Image
     shortNames:
-    - img
+      - img
 ---
 apiVersion: v1
 kind: Namespace
