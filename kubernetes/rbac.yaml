@@ -99,9 +99,9 @@ roleRef:
   kind: ClusterRole
   name: kubevirt-manager
 subjects:
-- kind: ServiceAccount
-  name: kubevirt-manager
-  namespace: kubevirt-manager
+  - kind: ServiceAccount
+    name: kubevirt-manager
+    namespace: kubevirt-manager
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -135,9 +135,9 @@ roleRef:
   kind: ClusterRole
   name: kubevirt-manager-kccm
 subjects:
-- kind: ServiceAccount
-  name: kubevirt-manager
-  namespace: kubevirt-manager
+  - kind: ServiceAccount
+    name: kubevirt-manager
+    namespace: kubevirt-manager
 
 ---
 kind: ClusterRole
@@ -202,9 +202,9 @@ roleRef:
   kind: ClusterRole
   name: kubevirt-manager-cas-workload
 subjects:
-- kind: ServiceAccount
-  name: kubevirt-manager
-  namespace: kubevirt-manager
+  - kind: ServiceAccount
+    name: kubevirt-manager
+    namespace: kubevirt-manager
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -219,6 +219,6 @@ roleRef:
   kind: ClusterRole
   name: kubevirt-manager-cas-management
 subjects:
-- kind: ServiceAccount
-  name: kubevirt-manager
-  namespace: kubevirt-manager
+  - kind: ServiceAccount
+    name: kubevirt-manager
+    namespace: kubevirt-manager
