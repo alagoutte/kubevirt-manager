@@ -25,24 +25,24 @@ spec:
           image: kubevirtmanager/kubevirt-manager:1.5.0
           imagePullPolicy: IfNotPresent
           ports:
-          - name: http
-            containerPort: 8080
+            - name: http
+              containerPort: 8080
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             runAsUser: 10000
             runAsGroup: 30000
           volumeMounts:
-          - name: cache-volume
-            mountPath: /var/cache/nginx
-          - name: run-volume
-            mountPath: /var/run
-          - name: auth-config
-            mountPath: /etc/nginx/auth.d/
-          - name: auth-secret
-            mountPath: /etc/nginx/secret.d/
-          - name: prometheus-config
-            mountPath: /etc/nginx/location.d/
+            - name: cache-volume
+              mountPath: /var/cache/nginx
+            - name: run-volume
+              mountPath: /var/run
+            - name: auth-config
+              mountPath: /etc/nginx/auth.d/
+            - name: auth-secret
+              mountPath: /etc/nginx/secret.d/
+            - name: prometheus-config
+              mountPath: /etc/nginx/location.d/
       serviceAccountName: kubevirt-manager
       restartPolicy: Always
       volumes:
